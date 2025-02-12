@@ -16,6 +16,11 @@
       - Run: `wsl --unregister ubuntu`  
       - Run: `wsl --install`  
 5. Enter a Linux username and password. Don’t forget what they are!
+6. If you forgot your password
+   a. Launch Powershell
+      - Run: ubuntu --default-user root
+   b. Launch Ubuntu
+      - If you know the username, Run: passwd [username]
 
 ## Part 2: Create an Account in GitHub
 1. Visit [GitHub.com](https://github.com/) and follow the sign-up process.
@@ -27,7 +32,7 @@
    a. Open Extensions (`Ctrl+Shift+X`) in VS Code and install the Python extension provided by Microsoft.  
 3. **Install Remote – WSL Extension**  
    a. In Extensions, search for and install the "Remote - WSL" extension.  
-4. **Install GitHub Repositories Extension for Visual Studio Code**  
+4. **Install GitHub Repositories and GitHub Actions Extensions for Visual Studio Code**  
    a. In Extensions, search for "GitHub Repositories" by GitHub.  
 5. **Sign in to GitHub**  
    a. Open the Command Palette by pressing `Ctrl+Shift+P`.  
@@ -57,8 +62,9 @@
    a. Run: `python3 --version`  
    b. Run: `pip3 --version`  
 3. **Create a Virtual Environment**  
-   a. Navigate to the project directory.  
-   b. Run: `python3 -m venv venv`  
+   a. Navigate to the project directory. 
+   b. Run: `sudo apt install python3.10-venv` 
+   C. Run: `python3 -m venv venv`  
 4. **Activate the Virtual Environment**  
    a. Run: `source venv/bin/activate`  
    b. Verify that `(venv)` appears at the start of your terminal prompt.  
