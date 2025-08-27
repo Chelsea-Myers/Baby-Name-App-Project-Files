@@ -37,8 +37,8 @@ def get_name_popularity():
     """
     
     # Parse HTTP GET parameters
-    name = request.args.get('name')
-    sex = request.args.get('sex')
+    name_submitted = request.args.get('name')
+    sex_submitted = request.args.get('sex')
     
     # Extract year and rank in year for the given name-sex combination
 
@@ -66,6 +66,7 @@ def get_name_popularity():
 # Load babynames.csv into a pandas dataframe using the path './data/babynames.csv'
 # Name the columns 'sex', 'year', 'name' and 'count
 # Name this dataframe "babynames"
+
 
 
 # Construct a column giving the rank within each year and sex for each name
