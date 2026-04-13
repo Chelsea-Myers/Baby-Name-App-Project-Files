@@ -43,6 +43,7 @@ def get_name_popularity():
     # Extract year and rank in year for the given name-sex combination
 
 
+
     # Some names do not appear in all years
     #
     # Build the return list with a value of None for the years where
@@ -69,12 +70,10 @@ def get_name_popularity():
 
 
 
-
 # Construct a column giving the rank within each year and sex for each name
 #
 # e.g. Mary is the #1 ranking name for girls in 1910
 #      John is the #1 ranking name for boys in 1910
-
 
 
 #The output should be a column of babynames called 'rank_in_year'
