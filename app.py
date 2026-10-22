@@ -41,9 +41,7 @@ def get_name_popularity():
     sex_submitted = request.args.get('sex')
     
     # Extract year and rank in year for the given name-sex combination
-
-
-
+     
     # Some names do not appear in all years
     #
     # Build the return list with a value of None for the years where
