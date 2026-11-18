@@ -42,8 +42,14 @@ def get_name_popularity():
     
     # Extract year and rank in year for the given name-sex combination
 
+    name_subset = babynames[
+    (babynames['name'] == name_submitted) &
+    (babynames['sex'] == sex_submitted)
+]
 
-
+    name_years = name_subset['year'].tolist()
+    name_ranks = name_subset['rank_in_year'].tolist()
+   
     # Some names do not appear in all years
     #
     # Build the return list with a value of None for the years where
@@ -74,8 +80,11 @@ def get_name_popularity():
 # e.g. Mary is the #1 ranking name for girls in 1910
 #      John is the #1 ranking name for boys in 1910
 
+babynames = pd.read_csv('./data/babynames.csv',
+                        names=['sex','year','name','count'])
 
 #The output should be a column of babynames called 'rank_in_year'
 #Calculate rank in year by grouping babynames by 'year' and then 'sex'
 #Then calculate the rank() of 'count' where ascending=False
 
+babynames['rank_in_year'] = babynames.groupby(['year','sex'])['count'].rank(ascending=False)
